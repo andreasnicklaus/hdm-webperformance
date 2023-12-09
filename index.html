@@ -2,23 +2,28 @@
 <head>
 	<meta charset="utf-8">
 	<!-- Google Analytics -->
-	<script>
+	<script defer>
 		window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
 		ga('create', 'UA-XXXXX-Y', 'auto');
 		ga('send', 'pageview');
 	</script>
 	<!-- End Google Analytics -->
 	<script defer src='https://www.google-analytics.com/analytics.js'></script>
-	<script defer src="https://code.jquery.com/jquery-3.2.1.js"></script>
+	<!-- <script defer src="https://code.jquery.com/jquery-3.2.1.js"></script> -->
 	<link rel="preload" as="style" href="styles.css" />
 	<link rel="stylesheet" href="styles.css" />
-	<style>
-		@import url("https://fonts.googleapis.com/css?family=Dokdo");
-	</style>
+	
 	<!-- <link rel="preload" as="style" href="jquery-ui.css" />
 	<link rel="stylesheet" href="jquery-ui.css" /> -->
+
+	<link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Dokdo" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dokdo" />
+
 	<link rel="preconnect" href="https://www.youtube.com">
 	<link rel="preconnect" href="https://source.unsplash.com">
+
+	<link rel="preload" fetchpriority="high" as="image" href="https://source.unsplash.com/random/500x300" type="image/webp">
+
 	<title>Website with perf issues</title>
 </head>
 
@@ -29,7 +34,7 @@
 			<h1>Hello</h1>
 		</div>
 		<div class="box">
-			<img width="500" height="300" src="https://source.unsplash.com/random/500x300" loading="lazy" />
+			<img width="500" height="300" src="https://source.unsplash.com/random/500x300" loading="eager" />
 		</div>
 		<div class="box">
 			<h2>Breaking news</h2>
